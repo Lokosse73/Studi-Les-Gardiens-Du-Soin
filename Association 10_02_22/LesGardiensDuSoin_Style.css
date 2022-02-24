@@ -1,0 +1,163 @@
+html{ /*Variables*/
+    --Color1: white;
+    --Color2: rgb(194, 219, 177);
+    --Color3: rgb(0, 255, 0);
+    --ShadowColor: rgba(0, 0, 0, 0.35);
+}
+body{
+    background-color: var(--Color2);
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: var(--Color1);
+    display: flex;
+    justify-content: center;
+    box-shadow: var(--ShadowColor) 0px -20px 20px 20px;
+}
+header div{
+    display: flex;
+    justify-content: center;
+}
+header h1{
+    padding-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+nav{
+    height: 50px;
+}
+nav ul{
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    margin: 0px;
+}
+nav li{
+    display: table;
+    border-bottom: 2px solid;
+}
+nav a{
+    vertical-align: middle;
+    display: table-cell;
+    text-decoration: none;
+    color: black;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ThisPage{
+    border-bottom: 2px var(--Color3) solid;
+}
+main{
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.Grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.Card{
+    display: grid;
+    background-color: var(--Color1);
+    box-shadow: var(--ShadowColor) 0px 5px 15px;
+    border-radius: 20px;
+    margin: 20px;
+}
+.Card img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+.Card .CardContent{
+    display: flex;
+}
+.Card div{
+    width: 100%;
+}
+.Card h2{
+    text-align: center;
+}
+.Card p{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Long{
+    background-color: var(--Color1);
+    box-shadow: var(--ShadowColor) 0px 5px 15px;
+    border-radius: 20px;
+    margin: 20px;
+    grid-column: 1 / 3;
+}
+.Long img{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
+    width: 20%;
+    height: 100%;
+}
+
+.WithInfo img{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 20%;
+    height: 100%;
+}
+
+.Info{
+    background-color: var(--Color3);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+}
+
+.ToTop{ /*Bouton pour retourner en haut*/
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.Copyright{
+    position: fixed;
+    bottom: 0px;
+    background-color: var(--Color1);
+    width: 100%;
+    box-shadow: var(--ShadowColor) 0px 20px 20px 20px;
+}
+.Copyright p{
+    text-align: center;
+    margin: 0px;
+}
+
+@media screen and (max-width: 900px){
+    header{
+        display: block;
+    }
+    main{
+        margin-top: 150px;
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+        padding-left: 0px;
+    }
+    .Grid{
+        display: block;
+    }
+    .Long img{
+        display: none;
+    }
+}
